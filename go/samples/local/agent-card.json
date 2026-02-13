@@ -1,0 +1,64 @@
+{
+  "name": "Local Files Agent",
+  "description": "Agent that can list files, get weather, and tell time — running on Foundry Local",
+  "version": "1.0.0",
+  "protocolVersion": "0.2.0",
+  "preferredTransport": "httpJson",
+  "defaultInputModes": ["text"],
+  "defaultOutputModes": ["text"],
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "skills": [
+    {
+      "id": "list_local_files",
+      "name": "List Local Files",
+      "description": "Lists files in the agent's current working directory",
+      "tags": ["files", "local", "directory"],
+      "examples": [
+        "What files are in your current directory?",
+        "List the local files"
+      ]
+    },
+    {
+      "id": "get_weather",
+      "name": "Get Weather",
+      "description": "Get the current weather for a location",
+      "tags": ["weather", "forecast"],
+      "examples": [
+        "What's the weather in Seattle?"
+      ]
+    },
+    {
+      "id": "get_time",
+      "name": "Get Time",
+      "description": "Get the current time",
+      "tags": ["time", "clock"],
+      "examples": [
+        "What time is it?"
+      ]
+    },
+    {
+      "id": "list_docker_images",
+      "name": "List Docker Images",
+      "description": "Lists Docker images available on the host machine",
+      "tags": ["docker", "containers", "images"],
+      "examples": [
+        "What Docker images are available?",
+        "List my Docker images"
+      ]
+    },
+    {
+      "id": "get_disk_space",
+      "name": "Get Disk Space",
+      "description": "Gets available disk space for all drives on the host machine",
+      "tags": ["disk", "storage", "space", "drives"],
+      "examples": [
+        "How much disk space do I have?",
+        "Show free disk space"
+      ]
+    }
+  ]
+}
